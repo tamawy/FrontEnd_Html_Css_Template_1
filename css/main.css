@@ -1,7 +1,8 @@
 /* Start Variables */
 :root {
     --main-color: #10cab7;
-    --secondary-color: #2c4755
+    --secondary-color: #2c4755;
+    --section-color: #f6f6f6;
 }
 
 /* End Variables */
@@ -127,7 +128,6 @@ body {
 }
 
 .header .links li {
-    background-color: red00;
     transition: 0.3s;
     padding-bottom: 10px;
     margin-bottom: 10px;
@@ -191,7 +191,7 @@ body {
 .feature {
     padding-top: 60px;
     padding-bottom: 60px;
-    background-color: #f6f6f6;
+    background-color: var(--section-color);
 }
 
 .feature .feat {
@@ -271,15 +271,15 @@ body {
     content: "";
     background-color: var(--secondary-color);
     width: 25%;
-    height: calc(100% + 60px);
+    height: calc(100% + 80px);
     position: absolute;
-    top: -30px;
-    right: 5%;
+    top: -40px;
+    right: 10%;
     z-index: -1;
 }
 
 .col .image img {
-    height: 345px;
+    height: 300px;
 }
 
 .col .image::before {
@@ -291,3 +291,38 @@ body {
 }
 
 /* End Services */
+
+/*Start Portofolio*/
+.portofolio {
+    text-align: center;
+    padding: 60px 0px;
+    background-color: var(--section-color);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    text-align: start;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.card {
+    background-color: white;
+    margin: auto;
+}
+
+.card h3,
+.card p {
+    margin: 15px;
+}
+
+.card p {
+    color: #777;
+}
+
+.card img {
+    width: 100%;
+}
+
+/*End Portofolio*/

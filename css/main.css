@@ -3,6 +3,7 @@
     --main-color: #10cab7;
     --secondary-color: #2c4755;
     --section-color: #f6f6f6;
+    --main-padding: 60px;
 }
 
 /* End Variables */
@@ -217,6 +218,11 @@ body {
 /* End Feature Section */
 
 /* Start Services */
+.services {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+
 .services .container {
     text-align: center;
 }
@@ -295,7 +301,8 @@ body {
 /*Start Portofolio*/
 .portofolio {
     text-align: center;
-    padding: 60px 0px;
+    padding-bottom: var(--main-padding);
+    padding-top: var(--main-padding);
     background-color: var(--section-color);
 }
 
@@ -326,3 +333,106 @@ body {
 }
 
 /*End Portofolio*/
+
+/*Start About*/
+.about {
+    text-align: center;
+    padding-bottom: var(--main-padding);
+    padding-top: var(--main-padding);
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    text-align: start;
+}
+
+@media (max-width: 991px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.about-content .image {
+    position: relative;
+    width: 200px;
+    margin: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.about-content img {
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.about-content .image::after {
+    content: "";
+    height: calc(100%);
+    width: 70px;
+    top: -30px;
+    height: calc(100% - 90px);
+    right: -50%;
+    z-index: -1;
+    position: absolute;
+    border-bottom: solid 70px var(--main-color);
+    border-left: solid 70px var(--main-color);
+    background-color: transparent;
+}
+
+.about-content .image::before {
+    content: "";
+    height: 120%;
+    width: 70px;
+    top: -30px;
+    left: -20px;
+    z-index: -1;
+    position: absolute;
+    background-color: #ebeced;
+}
+
+@media (max-width: 991px) {
+
+    .about-content .image::after,
+    .about-content .image::before {
+        display: none;
+    }
+}
+
+.about-content .text {
+    width: calc(100% - 400px);
+    padding-left: 50PX;
+    padding-right: 50PX;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (max-width: 991px) {
+    .about-content .text {
+        width: 100%;
+    }
+}
+
+.about-content .text p:first-child {
+    font-weight: bold;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.about-content .text hr {
+    width: 50%;
+    border-color: var(--main-color);
+    margin-left: 0px;
+}
+
+.about-content .text p:last-child {
+    color: #777;
+    line-height: 1.8;
+    margin-top: 25px;
+}
+
+
+/*End About*/

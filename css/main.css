@@ -16,10 +16,13 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Work Sans", sans-serif;
 }
-
 
 .container {
     padding-left: 15px;
@@ -488,3 +491,21 @@ body {
 }
 
 /* End Contact */
+
+/* Footer section*/
+footer {
+    background-color: var(--secondary-color);
+    height: 60px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+
+footer span {
+    color: var(--main-color);
+    margin: 0 5px;
+}
+
+/* End Footer section*/

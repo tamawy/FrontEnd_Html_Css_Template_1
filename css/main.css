@@ -443,6 +443,7 @@ body {
 
 .contact {
     text-align: center;
+    background-color: var(--section-color);
 }
 
 .contact .container {
